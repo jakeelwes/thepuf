@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Public Universal Friend (AKA The PUF)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/013/396/404/non_2x/crumpled-paper-texture-realisric-crease-sheet-free-vector.jpg');
+            background-repeat: repeat;
+            font-family: 'Futura', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            min-height: 300vh;
+        }
+
+        .hero {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 20px 15px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+
+        .title {
+            font-family: 'Notable', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            color: #333;
+            animation: glow 3s ease-in-out infinite alternate;
+            padding: 0 20px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+            max-width: 90%;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+            max-width: 90%;
+        }
+
+        .instagram-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            text-decoration: none;
+        }
+
+        .instagram-icon {
+            width: 40px;
+            height: 40px;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+        }
+
+        .instagram-icon:hover {
+            filter: grayscale(50%);
+            transform: scale(1.1);
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
+            to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6); }
+        }
+
+        .content {
+            position: relative;
+            padding-bottom: 100px;
+        }
+
+        .item {
+            position: absolute;
+            max-width: 560px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid #777;
+            transition: transform 0.3s;
+            border-radius: 8px;
+        }
+
+        .item:hover {
+            transform: scale(1.02);
+            z-index: 10;
+        }
+
+        .item h2 {
+            margin-bottom: 15px;
+            font-family: 'Notable', sans-serif;
+            font-size: 1.4rem;
+        }
+
+        .item p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+
+        @media screen and (max-width: 768px) {
+            .title {
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+
+            .logo {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 15px;
+            }
+
+            .item {
+                width: 90% !important;
+                left: 5% !important;
+                margin-top: 0;
+                position: relative;
+                margin-bottom: 20px;
+                padding: 20px;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 10px;
+                margin-top: 0;
+            }
+            
+            .hero {
+                height: auto;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            
+            .subtitle, .contact-info {
+                margin-bottom: 10px;
+            }
+        }
+
+        .marquee {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 10px 0;
+            font-family: 'Notable', sans-serif;
+            font-size: 0.9rem;
+            z-index: 100;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="https://cdn-icons-png.flaticon.com/512/58/58735.png" alt="PUF Logo" class="logo">
+        <h1 class="title">The Public Universal Friend AKA The PUF</h1>
+        <h2 class="subtitle">Drag Omen | Debris Puppeteer | Postmodern Miracle Clown</h2>
+        <p class="contact-info">London Based cabaret artist - contact me or booking enquiries here <b>email</b></p>
+        <a href="https://www.instagram.com/puf.piece/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Instagram" class="instagram-icon">
+        </a>
+    </div>
+
+    <div class="content">
+        <div class="item" style="left: 10%; top: 20px; width: 500px;">
+            <h2>dsfgsdfggfdhdfgh</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/weJLtWaTXdQ" title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>subtitle or text etc etc.</p>
+        </div>
+
+        <div class="item" style="left: 45%; top: 280px; width: 520px;">
+            <p>sdafasdfsadfasdfsadfgdfghfghdsg</p>
+        </div>
+
+        <div class="item" style="left: 5%; top: 550px; width: 480px;">
+            <h2>adsfasdfhgfdd</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/h0FeWCmpLkk" title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>Tsdfsdfsfsdfsfgsdfgsdfgsd</p>
+        </div>
+
+        <div class="item" style="left: 55%; top: 720px; width: 450px;">
+            <p>hdfghdfghdfghsdfasdf</p>
+        </div>
+
+        <div class="item" style="left: 30%; top: 1000px; width: 540px;">
+            <h2>dfgf &amp; dfgsdfg</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/hRpGpkC2z9E" title="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>Tsdfgsdfghgfdg.</p>
+        </div>
+
+        <div class="item" style="left: 15%; top: 1350px; width: 450px;">
+            <p>sfasdkjfhalsdfgdfsgh</p>
+        </div>
+
+        <div class="item" style="left: 60%; top: 1500px; width: 420px;">
+            <p>dsfasdjkhfaskljdhflajsdfgfh</p>
+        </div>
+    </div>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            THE PUBLIC UNIVERSAL FRIEND • LKAJSDHLJKFHSDJHFLKjs 
+        </div>
+    </div>
+
+    <script>
+        // Mobile compatibility adjustments
+        function checkMobile() {
+            if (window.innerWidth <= 768) {
+                const items = document.querySelectorAll('.item');
+                const content = document.querySelector('.content');
+                content.style.marginTop = '20px';
+            }
+        }
+
+        window.onload = checkMobile;
+        window.onresize = checkMobile;
+
+        // Add a slight parallax effect for desktop
+        if (window.innerWidth > 768) {
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                document.body.style.backgroundPosition = `0 ${scrollPosition * 0.2}px`;
+            });
+        }
+    </script>
+</body>
+</html>
