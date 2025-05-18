@@ -1,69 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doghead</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>The Public Universal Friend | London Drag Omen & Miracle Clown</title>
+  <meta name="description" content="The Public Universal Friend (The Puf) is an London drag omen, debris puppeteer, and postmodern miracle clown. Contact for bookings, shows, and creative collaborations.">
+  <link rel="canonical" href="https://thepublicuniversalfriendakathepuf.org/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="The Public Universal Friend | London Drag Omen & Miracle Clown">
+  <meta property="og:description" content="The Public Universal Friend (The Puf) is an London drag omen, debris puppeteer, and postmodern miracle clown. Contact for bookings, shows, and creative collaborations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thepublicuniversalfriendakathepuf.org/">
+  <meta property="og:image" content="https://thepublicuniversalfriendakathepuf.org/Doghead-greyscale.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Public Universal Friend | London Drag Omen & Miracle Clown">
+  <meta name="twitter:description" content="The Public Universal Friend (The Puf) is an London drag omen, debris puppeteer, and postmodern miracle clown. Contact for bookings, shows, and creative collaborations.">
+  <meta name="twitter:image" content="https://thepublicuniversalfriendakathepuf.org/Doghead-greyscale.png">
+  <meta name="author" content="The Public Universal Friend">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Jolly+Lodger&family=Joti+One&family=Love+Ya+Like+A+Sister&family=Notable&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      /* font-family: 'Joti One', Futura, Helvetica, Arial, sans-serif; */
+      /* font-family: 'Love Ya Like A Sister', Futura, Helvetica, Arial, sans-serif; */
+      /* font-family: 'Jolly Lodger', Futura, Helvetica, Arial, sans-serif; */
+      font-family: 'Chelsea Market', Futura, Helvetica, Arial, sans-serif;
+      background-image: url('cardboard-texture-2.jpg');
+      background-size: cover;
+      background-position: top center;
+      color: #000;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .dog-image {
+      width: 250px;
+      height: auto;
+      margin: 0 auto 20px;
+      display: block;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .title {
+      font-family: 'Notable', Baskerville, 'Times New Roman', serif;
+      font-family: 'Jolly Lodger', Baskerville, 'Times New Roman', serif;
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contact {
+      margin: 20px 0;
+    }
+
+    .contact a {
+      display: inline-block;
+      background: #333;
+      color: #fff;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .contact a:hover {
+      background: #555;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      margin: 30px 0;
+      border: 20px solid #000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      text-align: left;
+      margin: 30px auto;
+      max-width: 600px;
+      padding: 0 10px;
+    }
+
+    @media (min-width: 768px) {
+      .dog-image {
+        width: 300px;
+      }
+
+      .container {
+        padding: 60px 40px;
+      }
+
+      .title {
+        font-size: 3rem;
+      }
+
+      .video-container {
+        width: 80%;
+        padding-bottom: 45%;
+        margin: 30px auto;
+      }
+    }
+
+    @media (orientation: portrait) {
+      body {
+        background-size: auto 100%;
+      }
+    }
+
+    @media (orientation: landscape) {
+      body {
+        background-size: 100% auto;
+      }
+    }
+
+    @supports (-webkit-overflow-scrolling: touch) {
+      @media screen and (orientation: landscape) {
         body {
-            background-image: url('cardboard-texture-2.jpg');
-            background-size: cover;
-            background-position: top center;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            overflow: hidden;
+          width: -webkit-fill-available;
+          height: -webkit-fill-available;
         }
-
-        @media (orientation: portrait) {
-            body {
-                background-size: auto 100%;
-            }
-        }
-
-        @media (orientation: landscape) {
-            body {
-                background-size: 100% auto;
-            }
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            padding: 20px;
-        }
-
-        .floating-image {
-            max-height: 80vh;
-            width: auto;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-
-        @media screen and (max-width: 768px) {
-            .floating-image {
-                max-height: 70vh;
-                max-width: 90%;
-            }
-        }
-    </style>
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="Doghead greyscale.png" alt="Doghead greyscale" class="floating-image">
+  <div class="container">
+    <img src="Doghead greyscale.png" alt="Doghead" class="dog-image" />
+
+    <h1 class="title">The Public Universal Friend<br />AKA The Puf</h1>
+    <p class="subtitle">London Drag Omen | Debris Puppeteer | Postmodern Miracle Clown</p>
+
+    <div class="contact">
+      <p style="margin-bottom: 12px;">contact me &amp; booking inquiries</p>
+      <a href="mailto:puf4you@gmail.com">puf4you@gmail.com</a>
     </div>
+
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/C7ivO6xOVaY" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor...</p>
+    </div>
+  </div>
 </body>
 </html>
